@@ -1,0 +1,14 @@
+.highlighted {
+  background-color: rgb(252, 111, 111);
+}
+
+.th-color {
+  background-color: rgb(214, 214, 214);
+}
+
+.div-width {
+  width: 50%;
+}
+.div--height {
+  height: 400px;
+}

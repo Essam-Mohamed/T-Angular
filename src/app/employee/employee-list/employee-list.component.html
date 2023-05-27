@@ -1,0 +1,36 @@
+<div>
+  <div class="table-responsive col-4 mx-auto">
+    <table class="table align-middle text-center table-hover table-bordered">
+      <thead>
+        <tr class="th-color text-dark">
+          <th class="text-start">Name</th>
+          <th>Total Time in Month</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let emp of employees"
+          [ngClass]="{
+            highlighted: emp.totalWorkHours < 100
+          }"
+        >
+          <td class="text-start">{{ emp.name }}</td>
+          <td>{{ emp.totalWorkHours }} hrs</td>
+          <td><a href="#">Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="div-width mx-auto">
+    <div>
+      <canvas
+        baseChart
+        [datasets]="chartData"
+        [labels]="chartLabels"
+        [options]="chartOptions"
+        [type]="chartType"
+      ></canvas>
+    </div>
+  </div>
+</div>
